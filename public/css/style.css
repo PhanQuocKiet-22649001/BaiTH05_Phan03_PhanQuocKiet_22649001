@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f7f7fb;
+  color: #016749;
+  text-align: center;
+}
+
+/* Link mặc định */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Container chính */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Thanh trên cùng */
+.topbar {
+  background: #016749;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+}
+
+.topbar .brand {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: center;   /* căn giữa menu */
+  gap: 32px;                 /* khoảng cách đều giữa các mục */
+}
+.nav a {
+  margin-left: 12px;
+  opacity: .9;
+}
+
+.nav .link-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #eee;
+  text-align: center;
+}
+
+/* Tiêu đề */
+h1 {
+  margin: 16px 0;
+}
+
+/* Flex utility */
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.gap {
+  gap: 8px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+  justify-items: center;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  text-align: center;
+}
+
+/* Form */
+.form {
+  display: grid;
+  gap: 12px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form button {
+  width: 100%;
+}
+
+/* Button chung */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  min-width: 80px;        /* cùng kích thước tối thiểu */
+  border: 1px solid #016749;
+  border-radius: 8px;
+  background: #016749;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.danger {
+  background: #d11;
+  border-color: #d11;
+  height: 43.2px;
+}
+
+.btn.danger:hover {
+  background: #b00;
+}
+
+/* Bảng */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.table .actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Inline form trong bảng */
+.inline {
+  display: inline;
+  margin: 0;
+}
+
+/* Flash message */
+.flash {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.flash.success {
+  background: #e6ffed;
+  border: 1px solid #9ae6b4;
+}
+
+.flash.error {
+  background: #ffe6e6;
+  border: 1px solid #feb2b2;
+}
+
+/* Nhóm nút dưới bảng */
+.btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+/* Button chung */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  min-width: 90px;         /* nút cùng chiều rộng */
+  height: 42px;            /* nút cùng chiều cao */
+  border: 1px solid #016749;
+  border-radius: 8px;
+  background: #016749;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  transition: 0.2s;
+  text-decoration: none;   /* bỏ gạch dưới của <a> */
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.danger {
+  background: #d11;
+  border-color: #d11;
+}
+
+.btn.danger:hover {
+  background: #b00;
+}
+
+/* Nhóm nút trong bảng */
+.table .actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.inline {
+  display: inline;
+  margin: 0;
+}
+.form button {
+  width: 100%;                 /* full chiều rộng giống input */
+  padding: 10px;               /* khoảng cách đều */
+  border: 1px solid #016749;
+  border-radius: 8px;
+  background: #016749;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form button:hover {
+  opacity: 0.9;
+}
+/* Form lọc sản phẩm */
+.row.gap input[type="text"],
+.row.gap select,
+.row.gap button {
+  padding: 12px 16px;       /* to hơn */
+  font-size: 15px;          /* chữ to hơn */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.row.gap input[type="text"] {
+  flex: 2;                  /* ô tìm kiếm dài hơn */
+}
+
+.row.gap select {
+  flex: 1;                  /* ô chọn nhà cung cấp vừa phải */
+}
+
+.row.gap button {
+  background: #016749;
+  color: #fff;
+  border: 1px solid #016749;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.row.gap button:hover {
+  opacity: 0.9;
+}
+
